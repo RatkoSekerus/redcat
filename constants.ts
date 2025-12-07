@@ -6,7 +6,7 @@ export const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || "";
 export const PRODUCTS: Product[] = [
   {
     id: 1,
-    name: "Boja za kosu VERTIKAL",
+    name: "Boja za kosu VERTIKALt",
     size: "100ml",
     price: 800,
     description: "Profesionalna boja za kosu.",
