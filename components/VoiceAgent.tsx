@@ -126,8 +126,16 @@ const VoiceAgent: React.FC = () => {
     setStatus("Povezivanje...");
 
     try {
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+      if (!apiKey || apiKey.trim() === "") {
+        throw new Error(
+          "VITE_GEMINI_API_KEY nije podešena. Molimo proverite da li je environment varijabla VITE_GEMINI_API_KEY podešena u Netlify dashboard-u (ne GEMINI_API_KEY)."
+        );
+      }
+
       const ai = new GoogleGenAI({
-        apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+        apiKey: apiKey,
       });
 
       // Tool Definition
@@ -345,7 +353,12 @@ const VoiceAgent: React.FC = () => {
       sessionPromiseRef.current = sessionPromise;
     } catch (err) {
       console.error(err);
-      setError("Nije moguće pristupiti mikrofonu ili API-ju.");
+      const errorMessage =
+        err instanceof Error
+          ? err.message
+          : "Nije moguće pristupiti mikrofonu ili API-ju.";
+      setError(errorMessage);
+      setStatus("Greška pri povezivanju");
     }
   };
 
