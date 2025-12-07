@@ -10,11 +10,8 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        // Telegram env vars are automatically available via import.meta.env in Vite
-      },
+      // Vite automatically exposes VITE_* prefixed env vars to import.meta.env
+      // No need for define for VITE_ prefixed variables
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),

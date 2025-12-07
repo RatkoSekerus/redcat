@@ -126,7 +126,9 @@ const VoiceAgent: React.FC = () => {
     setStatus("Povezivanje...");
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({
+        apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+      });
 
       // Tool Definition
       const placeOrderTool: FunctionDeclaration = {

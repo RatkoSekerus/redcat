@@ -17,7 +17,7 @@ View your app in AI Studio: https://ai.studio/apps/temp/1
    `npm install`
 2. Create a `.env.local` file in the root directory with your environment variables:
    ```
-   GEMINI_API_KEY=your_gemini_api_key_here
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
    VITE_TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
    VITE_TELEGRAM_CHAT_ID=your_telegram_chat_id_here
    ```
