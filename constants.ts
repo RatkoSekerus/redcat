@@ -1,8 +1,7 @@
 import { Product } from "./types";
 
-export const TELEGRAM_BOT_TOKEN =
-  "7706095678:AAEySWAP1g0leoMjcBexZoMHh18U306CKsc";
-export const TELEGRAM_CHAT_ID = "7651836488";
+export const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || "";
+export const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || "";
 
 export const PRODUCTS: Product[] = [
   {

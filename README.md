@@ -15,6 +15,12 @@ View your app in AI Studio: https://ai.studio/apps/temp/1
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Create a `.env.local` file in the root directory with your environment variables:
+   ```
+   GEMINI_API_KEY=your_gemini_api_key_here
+   VITE_TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+   VITE_TELEGRAM_CHAT_ID=your_telegram_chat_id_here
+   ```
+   See `.env.example` for a template.
 3. Run the app:
    `npm run dev`
