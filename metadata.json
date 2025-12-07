@@ -1,0 +1,7 @@
+{
+  "name": "Red Cat AI Shop",
+  "description": "AI-powered voice commerce for Red Cat hair products.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
